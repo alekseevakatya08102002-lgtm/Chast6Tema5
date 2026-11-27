@@ -51,6 +51,7 @@ namespace Chast6Tema5
             {
                 j = 0;
                 sum1 = sum2;
+                sum2 = 0;
                 while (j < n)
                 {
                     sum2 += array[i, j];
@@ -70,12 +71,32 @@ namespace Chast6Tema5
                 Console.WriteLine("Матрица не является магическим квадратом");
             }
             else
-                Console.WriteLine("Матрица является магическим квадратом");
             #endregion
             #region Проверка столбцов матрицы
             {
-                k = 0;
-
+                j = 0;
+                while (j<n)
+                {
+                    k = 0;
+                    i = 0;
+                    sum1 = sum2;
+                    sum2 = 0;
+                    while (i < n)
+                    {
+                        sum2 += array[i, j];
+                        i++;
+                    }
+                    if (sum1 == sum2)
+                    {
+                        k += 0;
+                    }
+                    else
+                    {
+                        k++;
+                    }
+                    j++;
+                }
+                
             }
             #endregion
             Console.ReadKey();
